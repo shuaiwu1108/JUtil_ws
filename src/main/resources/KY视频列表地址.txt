@@ -1,0 +1,61 @@
+萌芽8期：1.1 心理学入门, /podcasts/606d535cdeb2bc229e6af45a
+萌芽8期：1.2 大脑与行为, /podcasts/606ea7ad5a85d22252a51e44
+萌芽8期：1.3 感觉与知觉, /podcasts/606fe0bf6e4e622e0b36825f
+萌芽8期：答疑1.1, /podcasts/606fe0d869e7e41e6d60f770
+萌芽8期：1.4 注意力与记忆力, /podcasts/606fe0e236ee552de349c38e
+萌芽8期：1.5 动机与情绪, /podcasts/606fe0f3e307c22e20042485
+萌芽8期：1.6 发展心理学：认知, /podcasts/60766494b2b387403fd1051c
+萌芽8期：1.7 发展心理学：依恋, /podcasts/607664a81a16d33ff676a06e
+萌芽8期：答疑1.2, /podcasts/607664c3c0ca65405fd95487
+萌芽8期：1.8 个性与人格, /podcasts/607664d60591654010545213
+萌芽8期：1.9 社会心理学, /podcasts/607676ffc0ca65405fd9557a
+萌芽8期：1.10 压力与健康, /podcasts/6076b4bb1a16d33ff676a321
+萌芽8期：答疑1.3, /podcasts/6080f7844d766140302581db
+萌芽8期：2.1 心理咨询职业伦理守则, /podcasts/6080f7c690edd1401f6d19f4
+萌芽8期：2.2 临床实践中的设置与伦理议题, /podcasts/6080f83dcb005c2e2b512968
+萌芽8期：答疑2.1, /podcasts/608243be2842fc4535c4199d
+萌芽8期：3.1 心理咨询发展史与流派简介, /podcasts/608244041a85e14515abd616
+萌芽8期：3.2 精神分析理论与方法, /podcasts/608244141a85e14515abd617
+萌芽8期：3.3 行为主义理论与方法, /podcasts/608638a405916540105553d7
+萌芽8期：3.4 认知学派理论与方法, /podcasts/60863929cb005c2e2b51abed
+萌芽8期：答疑3.1, /podcasts/6089281ba5d2d87dc18f4e87
+萌芽8期：3.5 存在-人本主义理论与方法, /podcasts/608928685689137acfe8caf9
+萌芽8期：3.6 人本主义心理治疗, /podcasts/608928a81ddbe152837681ff
+萌芽8期：3.7 格式塔心理治疗, /podcasts/6098f644eeae405888038124
+萌芽8期：3.8 家庭心理治疗, /podcasts/6098f6b8eff8e01aa993132c
+萌芽8期：答疑3.2, /podcasts/6098f692bf2ebe1a71b46d3a
+萌芽8期：3.9 整合性心理治疗, /podcasts/60ae0e261a323009662bf300
+萌芽8期：3.10 其他心理治疗理论与方法, /podcasts/60ae0e8e937ea009b73ca401
+萌芽8期：4.1 总述：心理咨询的面谈技术, /podcasts/60b075d20b40953537689662
+萌芽8期：答疑3.3, /podcasts/60ae0ec50e32a0098aa4bc91
+萌芽8期：4.2 情绪反馈技术, /podcasts/60b0761a9f3edf35579a5718
+萌芽8期：4.3 常用的提问技术, /podcasts/60b0762947bdc133ed66038d
+萌芽8期：4.4 面质, /podcasts/60ed4aedbea01b2e123e81a6
+萌芽8期：答疑4.1, /podcasts/60ed4b8e05a23d2decd0008a
+萌芽8期：4.5 澄清, /podcasts/60ed4af3ddb9852dd24bc79b
+萌芽8期：4.6 空椅子技术, /podcasts/60ed4bd1ad4e8d2dc1724773
+萌芽8期：4.7 诠释技术, /podcasts/60ed4c2305a23d2decd00092
+萌芽8期：答疑4.2, /podcasts/60ed4c55ad4e8d2dc172477c
+萌芽8期：4.8 自我觉察技术, /podcasts/60f1298a10125d09566dc624
+萌芽8期：4.9 共情能力的提高, /podcasts/60f1299cb26bd90931fb77bb
+萌芽8期：4.10 建议，作业布置，协同治疗，转介, /podcasts/60f129adeeb8850974ff63a0
+萌芽8期：答疑4.3, /podcasts/60f12ec4685ae4095bf3ea3c
+萌芽8期：5.1 心理咨询的设置, /podcasts/60f67ea610125d09566df52b
+萌芽8期：5.2 初始访谈, /podcasts/60f67ebb247a270947680997
+萌芽8期：5.3 咨访关系, /podcasts/60f79dec05a23d2decd064b1
+萌芽8期：5.4 心理咨询中的个案概念化, /podcasts/60f79e499b0b622dbb3d5d48
+萌芽8期：5.5 危机干预, /podcasts/60f79e88ad4e8d2dc172a41e
+萌芽8期：答疑5.1, /podcasts/60f79eb7ddb9852dd24c2818
+萌芽8期：6.1 诊断与DSM5, /podcasts/614bf3172f5d533bafadd454
+萌芽8期：6.2 精神分裂症谱系, /podcasts/614bf36b4c1f523b6f30be18
+萌芽8期：6.3 抑郁障碍, /podcasts/61500ccec468303b80565bf9
+萌芽8期：6.4 双相及相关障碍, /podcasts/61500cf68533883b4aabf927
+萌芽8期：答疑6.1, /podcasts/61500ced2f5d533bafadf747
+萌芽8期：6.5 强迫症及相关障碍, /podcasts/61500d041e42033b4582a4a5
+萌芽8期：6.6 焦虑障碍, /podcasts/617b8050a76dcd6e75f6d9b0
+萌芽8期：答疑6.2, /podcasts/61820aab4c63046e5178cbce
+萌芽8期：6.7 创伤与应激相关障碍, /podcasts/6184e948a23f996e6bc965bc
+萌芽8期：6.8 分离障碍与躯体障碍, /podcasts/6184e95d96fc966e23dbcc58
+萌芽8期：6.9 进食和成瘾障碍, /podcasts/6184e96da23f996e6bc965bd
+萌芽8期：6.10 人格障碍, /podcasts/618ce187786a5c6e40578dc6
+萌芽8期：答疑6.3, /podcasts/618ce1d796fc966e23dc15e1
