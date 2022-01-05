@@ -1,0 +1,1571 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="UTF8" ng-app="tangxl" style="" class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    <title>
+          八期:【糖心理×KnowYourself】心理咨询师·萌芽计划 -         KnowYourself
+    </title>
+    <!-- General META -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+    <!-- Semantic META -->
+    <meta name="keywords" content="糖心理,糖心理咨询,心理咨询,上海心理咨询,在线心理咨询,心理在线问答,抑郁症,强迫症,焦虑,亲子问题,育儿">
+    <meta name="description" content="糖心理，一个专业又温暖的心理平台，汇集了优秀靠谱的心理咨询师，为你提供专业的在线心理支持，普及各种有意思的心理知识。">
+  
+    <!-- Fav Icon -->
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  
+    <!--[if lt IE 9]>
+    <script src="/html5shiv/dist/html5shiv.min.js"></script>
+    <![endif]-->
+  
+    <!-- scripts -->
+    <script src="/js/vendor.cafe.js"></script>
+    <script src="/js/app/common.js"></script>
+    <script src="/js/app/app.js"></script>
+    <script src="https://static.tangxinli.com/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <script src="https://static.tangxinli.com/npm/vue@2.6.10/dist/vue.min.js"></script>
+    <script>
+      axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+    </script>
+  
+    <!-- styles -->
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/combine.css">
+  
+    <script>
+    var ViewModels = {
+      $digest: function(name, str) {
+        var json = $('<div/>').html(str).text()
+        if (json) {
+          var val = JSON.parse(json, function(key, value) {
+            if (typeof value == 'string') {
+              if (value.substring(0, 8) == 'function') {
+                eval('var func = ' + value)
+                return func;
+              }
+            }
+            return value;
+          });
+          if (name) {
+            this[name] = val;
+          } else {
+            Object.assign(this, val)
+          }
+        }
+      }
+    }
+    ViewModels.$digest(null, "{&#34;user&#34;:{&#34;objectId&#34;:&#34;6066b015dd6657225716f2c1&#34;,&#34;isPingppSynced&#34;:true,&#34;username&#34;:&#34;wx_kmzvygkq_7828nyv&#34;,&#34;password&#34;:&#34;7ftPbvw09X5gToDdGdzRxkBaA0cXVnLYLuxbYJsW+WQ=&#34;,&#34;salt&#34;:null,&#34;token&#34;:null,&#34;accessToken&#34;:null,&#34;refreshToken&#34;:null,&#34;group&#34;:&#34;user&#34;,&#34;status&#34;:null,&#34;banned&#34;:false,&#34;deleted&#34;:false,&#34;isMember&#34;:false,&#34;upgradedAt&#34;:null,&#34;isOps&#34;:false,&#34;isFin&#34;:false,&#34;isCX&#34;:false,&#34;CXStatus&#34;:null,&#34;CXPhone&#34;:null,&#34;CXRealName&#34;:null,&#34;expertId&#34;:null,&#34;email&#34;:null,&#34;emailVerified&#34;:false,&#34;phone&#34;:&#34;13476217399&#34;,&#34;phoneVerified&#34;:true,&#34;wxId&#34;:null,&#34;wechatNo&#34;:null,&#34;wechatId&#34;:&#34;oDgyWv9Zq-gNbpmJUz770Sk9tUQA&#34;,&#34;wxOpenId&#34;:&#34;oDgyWv9Zq-gNbpmJUz770Sk9tUQA&#34;,&#34;wxUnionId&#34;:&#34;o01ols5dSUKfzsvTNbxct7KJGX80&#34;,&#34;isWxBinded&#34;:true,&#34;ctkId&#34;:null,&#34;realname&#34;:null,&#34;nickname&#34;:&#34;头顶渐渐微凉&#34;,&#34;age&#34;:&#34;年龄未知&#34;,&#34;gender&#34;:&#34;男&#34;,&#34;portrait&#34;:&#34;https://thirdwx.qlogo.cn/mmopen/vi_32/oO5qc4JhBFhU9JUkFIJ9Ahx1NVpvXT8cKPDZn2iaLheaGedZZ5SX7Jua1jgUMvYaGXeVnuicoc1XO8uSAqtwPYKQ/132&#34;,&#34;source&#34;:null,&#34;refUrl&#34;:null,&#34;createdAt&#34;:&#34;2021-04-02T05:48:05.000Z&#34;,&#34;updatedAt&#34;:&#34;2021-12-20T02:02:11.000Z&#34;,&#34;lastLogin&#34;:&#34;2021-12-20T02:02:11.000Z&#34;,&#34;migrationId&#34;:null,&#34;totalPoints&#34;:0,&#34;id&#34;:182686,&#34;cityId&#34;:null,&#34;chatId&#34;:&#34;PR00182686&#34;,&#34;isAdmin&#34;:false,&#34;groupName&#34;:&#34;用户&#34;},&#34;course&#34;:{&#34;objectId&#34;:&#34;60bd524bf280bc1fad39e8dc&#34;,&#34;domain&#34;:&#34;knowyourself&#34;,&#34;typeName&#34;:null,&#34;code&#34;:null,&#34;status&#34;:1,&#34;hidden&#34;:true,&#34;title&#34;:&#34;八期:【糖心理×KnowYourself】心理咨询师·萌芽计划&#34;,&#34;titleImg&#34;:&#34;/tmp/c1986ce2dfab9e7d2c2b894a6238a297&#34;,&#34;summary&#34;:null,&#34;content&#34;:&#34;&#60;p style=\\&#34;text-align:center\\&#34;&#62;&#38;nbsp;&#60;/p&#62;\\n\\n&#60;p style=\\&#34;text-align:center\\&#34;&#62;&#60;img alt=\\&#34;\\&#34; src=\\&#34;/imgcache/8/v/8vdol83_klc15fk2\\&#34; style=\\&#34;height:1039px; width:300px\\&#34; /&#62;&#60;img alt=\\&#34;\\&#34; src=\\&#34;/imgcache/2/z/2zy902m_klc15frb\\&#34; style=\\&#34;height:1039px; width:300px\\&#34; /&#62;&#60;img alt=\\&#34;\\&#34; src=\\&#34;/imgcache/r/8/r8fvuhn_klc15fwm\\&#34; style=\\&#34;height:1039px; width:300px\\&#34; /&#62;&#60;img alt=\\&#34;\\&#34; src=\\&#34;/imgcache/c/h/ch7evl5_klc15g3n\\&#34; style=\\&#34;height:1039px; width:300px\\&#34; /&#62;&#60;img alt=\\&#34;\\&#34; src=\\&#34;/imgcache/e/k/ek87ez8_klc15ga8\\&#34; style=\\&#34;height:1039px; width:300px\\&#34; /&#62;&#60;img alt=\\&#34;\\&#34; src=\\&#34;/imgcache/u/t/ut0jsqa_klc15gfg\\&#34; style=\\&#34;height:960px; width:300px\\&#34; /&#62;&#60;img alt=\\&#34;\\&#34; src=\\&#34;/imgcache/q/o/qoat02o_klc15gld\\&#34; style=\\&#34;height:961px; width:300px\\&#34; /&#62;&#60;img alt=\\&#34;\\&#34; src=\\&#34;/imgcache/k/p/kpae68d_klc15grl\\&#34; style=\\&#34;height:960px; width:300px\\&#34; /&#62;&#60;img alt=\\&#34;\\&#34; src=\\&#34;/imgcache/g/s/gslsid7_klc15gxw\\&#34; style=\\&#34;height:960px; width:300px\\&#34; /&#62;&#60;img alt=\\&#34;\\&#34; src=\\&#34;/imgcache/3/h/3h2uljp_klc15h3b\\&#34; style=\\&#34;height:960px; width:300px\\&#34; /&#62;&#60;img alt=\\&#34;\\&#34; src=\\&#34;/imgcache/3/h/3h3lxh1_klc15h9a\\&#34; style=\\&#34;height:961px; width:300px\\&#34; /&#62;&#60;img alt=\\&#34;\\&#34; src=\\&#34;/imgcache/b/0/b0l4cu3_klc15he4\\&#34; style=\\&#34;height:960px; width:300px\\&#34; /&#62;&#60;img alt=\\&#34;\\&#34; src=\\&#34;/imgcache/u/w/uwrvce5_klc15him\\&#34; style=\\&#34;height:960px; width:300px\\&#34; /&#62;&#60;img alt=\\&#34;\\&#34; src=\\&#34;/imgcache/v/2/v23oasp_klc15hnb\\&#34; style=\\&#34;height:1090px; width:300px\\&#34; /&#62;&#60;img alt=\\&#34;\\&#34; src=\\&#34;/imgcache/p/9/p92vifd_klc15ht4\\&#34; style=\\&#34;height:1090px; width:300px\\&#34; /&#62;&#60;img alt=\\&#34;\\&#34; src=\\&#34;/imgcache/w/i/wigbcuh_klc15hzd\\&#34; style=\\&#34;height:1090px; width:300px\\&#34; /&#62;&#60;/p&#62;\\n&#34;,&#34;expertId&#34;:0,&#34;hostname&#34;:&#34;糖心理×KY&#34;,&#34;price&#34;:&#34;3490&#34;,&#34;points&#34;:0,&#34;city&#34;:&#34;网络&#34;,&#34;address&#34;:&#34;线上&#34;,&#34;capacity&#34;:0,&#34;useCapacity&#34;:false,&#34;attendeesCount&#34;:0,&#34;actStart&#34;:&#34;2021-04-08T10:00:00.000Z&#34;,&#34;actEnd&#34;:&#34;2023-04-08T10:00:00.000Z&#34;,&#34;signStart&#34;:null,&#34;signEnd&#34;:null,&#34;duration&#34;:0,&#34;createdAt&#34;:&#34;2021-02-10T08:32:31.000Z&#34;,&#34;updatedAt&#34;:&#34;2021-02-10T08:32:31.000Z&#34;,&#34;lastUpdate&#34;:&#34;2021-11-29T03:35:05.000Z&#34;,&#34;deleted&#34;:false,&#34;tags&#34;:null,&#34;customData&#34;:{&#34;remarks&#34;:&#34;&#60;p&#62;【缴费成功】【缴费成功】【缴费成功】&#60;/p&#62;\\n\\n&#60;p&#62;请务必加课程顾问为微信好友，把付费截图+真实姓名、手机号发给TA！&#60;/p&#62;\\n\\n&#60;p&#62;不然无法听课！&#60;/p&#62;\\n\\n&#60;p&#62;没加顾问的，加顾问微信号：txlkyzs5&#60;/p&#62;\\n\\n&#60;p&#62;加过无需重复添加！&#60;/p&#62;\\n&#34;,&#34;materials&#34;:[{&#34;link&#34;:&#34;https://pan.baidu.com/s/11RINAaMWyR544nmVfvmfcw&#34;,&#34;title&#34;:&#34;【课件汇总】提取码:f6i9&#34;}],&#34;replays&#34;:[{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.1 心理学入门&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/606d535cdeb2bc229e6af45a&#34;,&#34;id&#34;:0},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.2 大脑与行为&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/606ea7ad5a85d22252a51e44&#34;,&#34;id&#34;:1},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.3 感觉与知觉&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/606fe0bf6e4e622e0b36825f&#34;,&#34;id&#34;:2},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑1.1&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/606fe0d869e7e41e6d60f770&#34;,&#34;id&#34;:3},{&#34;hidden&#34;:false,&#34;requireEnroll&#34;:true,&#34;title&#34;:&#34;萌芽8期：1.4 注意力与记忆力&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/606fe0e236ee552de349c38e&#34;,&#34;id&#34;:4},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.5 动机与情绪&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/606fe0f3e307c22e20042485&#34;,&#34;id&#34;:5},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.6 发展心理学：认知&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60766494b2b387403fd1051c&#34;,&#34;id&#34;:6},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.7 发展心理学：依恋&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/607664a81a16d33ff676a06e&#34;,&#34;id&#34;:7},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑1.2&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/607664c3c0ca65405fd95487&#34;,&#34;id&#34;:8},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.8 个性与人格&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/607664d60591654010545213&#34;,&#34;id&#34;:9},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.9 社会心理学&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/607676ffc0ca65405fd9557a&#34;,&#34;id&#34;:10},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.10 压力与健康&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6076b4bb1a16d33ff676a321&#34;,&#34;id&#34;:11},{&#34;title&#34;:&#34;萌芽8期：答疑1.3&#34;,&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6080f7844d766140302581db&#34;,&#34;id&#34;:12},{&#34;title&#34;:&#34;萌芽8期：2.1 心理咨询职业伦理守则&#34;,&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6080f7c690edd1401f6d19f4&#34;,&#34;id&#34;:13},{&#34;title&#34;:&#34;萌芽8期：2.2 临床实践中的设置与伦理议题&#34;,&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6080f83dcb005c2e2b512968&#34;,&#34;id&#34;:14},{&#34;title&#34;:&#34;萌芽8期：答疑2.1&#34;,&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/608243be2842fc4535c4199d&#34;,&#34;id&#34;:15},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.1 心理咨询发展史与流派简介&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/608244041a85e14515abd616&#34;,&#34;id&#34;:16},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.2 精神分析理论与方法&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/608244141a85e14515abd617&#34;,&#34;id&#34;:17},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.3 行为主义理论与方法&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/608638a405916540105553d7&#34;,&#34;id&#34;:18},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.4 认知学派理论与方法&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60863929cb005c2e2b51abed&#34;,&#34;id&#34;:19},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑3.1&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6089281ba5d2d87dc18f4e87&#34;,&#34;id&#34;:20},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.5 存在-人本主义理论与方法&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/608928685689137acfe8caf9&#34;,&#34;id&#34;:21},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.6 人本主义心理治疗&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/608928a81ddbe152837681ff&#34;,&#34;id&#34;:22},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.7 格式塔心理治疗&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6098f644eeae405888038124&#34;,&#34;id&#34;:23},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.8 家庭心理治疗&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6098f6b8eff8e01aa993132c&#34;,&#34;id&#34;:24},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑3.2&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6098f692bf2ebe1a71b46d3a&#34;,&#34;id&#34;:25},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.9 整合性心理治疗&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ae0e261a323009662bf300&#34;,&#34;id&#34;:26},{&#34;title&#34;:&#34;萌芽8期：3.10 其他心理治疗理论与方法&#34;,&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ae0e8e937ea009b73ca401&#34;,&#34;id&#34;:27},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.1 总述：心理咨询的面谈技术&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60b075d20b40953537689662&#34;,&#34;id&#34;:28},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑3.3&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ae0ec50e32a0098aa4bc91&#34;,&#34;id&#34;:29},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.2 情绪反馈技术&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60b0761a9f3edf35579a5718&#34;,&#34;id&#34;:30},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.3 常用的提问技术&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60b0762947bdc133ed66038d&#34;,&#34;id&#34;:31},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.4 面质&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ed4aedbea01b2e123e81a6&#34;,&#34;id&#34;:32},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑4.1&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ed4b8e05a23d2decd0008a&#34;,&#34;id&#34;:33},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.5 澄清&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ed4af3ddb9852dd24bc79b&#34;,&#34;id&#34;:34},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.6 空椅子技术&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ed4bd1ad4e8d2dc1724773&#34;,&#34;id&#34;:35},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.7 诠释技术&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ed4c2305a23d2decd00092&#34;,&#34;id&#34;:36},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑4.2&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ed4c55ad4e8d2dc172477c&#34;,&#34;id&#34;:37},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.8 自我觉察技术&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f1298a10125d09566dc624&#34;,&#34;id&#34;:38},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.9 共情能力的提高&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f1299cb26bd90931fb77bb&#34;,&#34;id&#34;:39},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.10 建议，作业布置，协同治疗，转介&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f129adeeb8850974ff63a0&#34;,&#34;id&#34;:40},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑4.3&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f12ec4685ae4095bf3ea3c&#34;,&#34;id&#34;:41},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：5.1 心理咨询的设置&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f67ea610125d09566df52b&#34;,&#34;id&#34;:42},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：5.2 初始访谈&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f67ebb247a270947680997&#34;,&#34;id&#34;:43},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：5.3 咨访关系&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f79dec05a23d2decd064b1&#34;,&#34;id&#34;:44},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：5.4 心理咨询中的个案概念化&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f79e499b0b622dbb3d5d48&#34;,&#34;id&#34;:45},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：5.5 危机干预&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f79e88ad4e8d2dc172a41e&#34;,&#34;id&#34;:46},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑5.1&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f79eb7ddb9852dd24c2818&#34;,&#34;id&#34;:47},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.1 诊断与DSM5&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/614bf3172f5d533bafadd454&#34;,&#34;id&#34;:48},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.2 精神分裂症谱系&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/614bf36b4c1f523b6f30be18&#34;,&#34;id&#34;:49},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.3 抑郁障碍&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/61500ccec468303b80565bf9&#34;,&#34;id&#34;:50},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.4 双相及相关障碍&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/61500cf68533883b4aabf927&#34;,&#34;id&#34;:51},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑6.1&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/61500ced2f5d533bafadf747&#34;,&#34;id&#34;:52},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.5 强迫症及相关障碍&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/61500d041e42033b4582a4a5&#34;,&#34;id&#34;:53},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.6 焦虑障碍&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/617b8050a76dcd6e75f6d9b0&#34;,&#34;id&#34;:54},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑6.2&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/61820aab4c63046e5178cbce&#34;,&#34;id&#34;:55},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.7 创伤与应激相关障碍&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6184e948a23f996e6bc965bc&#34;,&#34;id&#34;:56},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.8 分离障碍与躯体障碍&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6184e95d96fc966e23dbcc58&#34;,&#34;id&#34;:57},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.9 进食和成瘾障碍&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6184e96da23f996e6bc965bd&#34;,&#34;id&#34;:58},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.10 人格障碍&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/618ce187786a5c6e40578dc6&#34;,&#34;id&#34;:59},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑6.3&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/618ce1d796fc966e23dc15e1&#34;,&#34;id&#34;:60}],&#34;attachments&#34;:[],&#34;linkUrl&#34;:&#34;https://www.tangxinli.com/livestreams/606d6889b2ed5f2273214a00&#34;,&#34;isLinkActive&#34;:true},&#34;id&#34;:544,&#34;typeId&#34;:13,&#34;subtypeId&#34;:13,&#34;parentId&#34;:0,&#34;chatroomId&#34;:null,&#34;livestreamId&#34;:null,&#34;createdDate&#34;:&#34;2021年2月10日&#34;,&#34;createdTime&#34;:&#34;16:32&#34;,&#34;closed&#34;:false,&#34;statusName&#34;:&#34;报名中&#34;,&#34;statusLabel&#34;:&#34;success&#34;,&#34;actStartDate&#34;:&#34;2021年4月8日&#34;,&#34;actStartTime&#34;:&#34;18:00&#34;,&#34;actEndDate&#34;:&#34;2023年4月8日&#34;,&#34;actEndTime&#34;:&#34;18:00&#34;,&#34;attachments&#34;:[],&#34;replays&#34;:[{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.1 心理学入门&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/606d535cdeb2bc229e6af45a&#34;,&#34;id&#34;:0},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.2 大脑与行为&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/606ea7ad5a85d22252a51e44&#34;,&#34;id&#34;:1},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.3 感觉与知觉&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/606fe0bf6e4e622e0b36825f&#34;,&#34;id&#34;:2},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑1.1&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/606fe0d869e7e41e6d60f770&#34;,&#34;id&#34;:3},{&#34;hidden&#34;:false,&#34;requireEnroll&#34;:true,&#34;title&#34;:&#34;萌芽8期：1.4 注意力与记忆力&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/606fe0e236ee552de349c38e&#34;,&#34;id&#34;:4},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.5 动机与情绪&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/606fe0f3e307c22e20042485&#34;,&#34;id&#34;:5},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.6 发展心理学：认知&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60766494b2b387403fd1051c&#34;,&#34;id&#34;:6},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.7 发展心理学：依恋&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/607664a81a16d33ff676a06e&#34;,&#34;id&#34;:7},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑1.2&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/607664c3c0ca65405fd95487&#34;,&#34;id&#34;:8},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.8 个性与人格&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/607664d60591654010545213&#34;,&#34;id&#34;:9},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.9 社会心理学&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/607676ffc0ca65405fd9557a&#34;,&#34;id&#34;:10},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：1.10 压力与健康&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6076b4bb1a16d33ff676a321&#34;,&#34;id&#34;:11},{&#34;title&#34;:&#34;萌芽8期：答疑1.3&#34;,&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6080f7844d766140302581db&#34;,&#34;id&#34;:12},{&#34;title&#34;:&#34;萌芽8期：2.1 心理咨询职业伦理守则&#34;,&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6080f7c690edd1401f6d19f4&#34;,&#34;id&#34;:13},{&#34;title&#34;:&#34;萌芽8期：2.2 临床实践中的设置与伦理议题&#34;,&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6080f83dcb005c2e2b512968&#34;,&#34;id&#34;:14},{&#34;title&#34;:&#34;萌芽8期：答疑2.1&#34;,&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/608243be2842fc4535c4199d&#34;,&#34;id&#34;:15},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.1 心理咨询发展史与流派简介&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/608244041a85e14515abd616&#34;,&#34;id&#34;:16},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.2 精神分析理论与方法&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/608244141a85e14515abd617&#34;,&#34;id&#34;:17},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.3 行为主义理论与方法&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/608638a405916540105553d7&#34;,&#34;id&#34;:18},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.4 认知学派理论与方法&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60863929cb005c2e2b51abed&#34;,&#34;id&#34;:19},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑3.1&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6089281ba5d2d87dc18f4e87&#34;,&#34;id&#34;:20},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.5 存在-人本主义理论与方法&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/608928685689137acfe8caf9&#34;,&#34;id&#34;:21},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.6 人本主义心理治疗&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/608928a81ddbe152837681ff&#34;,&#34;id&#34;:22},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.7 格式塔心理治疗&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6098f644eeae405888038124&#34;,&#34;id&#34;:23},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.8 家庭心理治疗&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6098f6b8eff8e01aa993132c&#34;,&#34;id&#34;:24},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑3.2&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6098f692bf2ebe1a71b46d3a&#34;,&#34;id&#34;:25},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：3.9 整合性心理治疗&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ae0e261a323009662bf300&#34;,&#34;id&#34;:26},{&#34;title&#34;:&#34;萌芽8期：3.10 其他心理治疗理论与方法&#34;,&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ae0e8e937ea009b73ca401&#34;,&#34;id&#34;:27},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.1 总述：心理咨询的面谈技术&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60b075d20b40953537689662&#34;,&#34;id&#34;:28},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑3.3&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ae0ec50e32a0098aa4bc91&#34;,&#34;id&#34;:29},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.2 情绪反馈技术&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60b0761a9f3edf35579a5718&#34;,&#34;id&#34;:30},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.3 常用的提问技术&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60b0762947bdc133ed66038d&#34;,&#34;id&#34;:31},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.4 面质&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ed4aedbea01b2e123e81a6&#34;,&#34;id&#34;:32},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑4.1&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ed4b8e05a23d2decd0008a&#34;,&#34;id&#34;:33},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.5 澄清&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ed4af3ddb9852dd24bc79b&#34;,&#34;id&#34;:34},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.6 空椅子技术&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ed4bd1ad4e8d2dc1724773&#34;,&#34;id&#34;:35},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.7 诠释技术&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ed4c2305a23d2decd00092&#34;,&#34;id&#34;:36},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑4.2&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60ed4c55ad4e8d2dc172477c&#34;,&#34;id&#34;:37},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.8 自我觉察技术&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f1298a10125d09566dc624&#34;,&#34;id&#34;:38},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.9 共情能力的提高&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f1299cb26bd90931fb77bb&#34;,&#34;id&#34;:39},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：4.10 建议，作业布置，协同治疗，转介&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f129adeeb8850974ff63a0&#34;,&#34;id&#34;:40},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑4.3&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f12ec4685ae4095bf3ea3c&#34;,&#34;id&#34;:41},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：5.1 心理咨询的设置&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f67ea610125d09566df52b&#34;,&#34;id&#34;:42},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：5.2 初始访谈&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f67ebb247a270947680997&#34;,&#34;id&#34;:43},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：5.3 咨访关系&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f79dec05a23d2decd064b1&#34;,&#34;id&#34;:44},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：5.4 心理咨询中的个案概念化&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f79e499b0b622dbb3d5d48&#34;,&#34;id&#34;:45},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：5.5 危机干预&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f79e88ad4e8d2dc172a41e&#34;,&#34;id&#34;:46},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑5.1&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/60f79eb7ddb9852dd24c2818&#34;,&#34;id&#34;:47},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.1 诊断与DSM5&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/614bf3172f5d533bafadd454&#34;,&#34;id&#34;:48},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.2 精神分裂症谱系&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/614bf36b4c1f523b6f30be18&#34;,&#34;id&#34;:49},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.3 抑郁障碍&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/61500ccec468303b80565bf9&#34;,&#34;id&#34;:50},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.4 双相及相关障碍&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/61500cf68533883b4aabf927&#34;,&#34;id&#34;:51},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑6.1&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/61500ced2f5d533bafadf747&#34;,&#34;id&#34;:52},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.5 强迫症及相关障碍&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/61500d041e42033b4582a4a5&#34;,&#34;id&#34;:53},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.6 焦虑障碍&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/617b8050a76dcd6e75f6d9b0&#34;,&#34;id&#34;:54},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑6.2&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/61820aab4c63046e5178cbce&#34;,&#34;id&#34;:55},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.7 创伤与应激相关障碍&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6184e948a23f996e6bc965bc&#34;,&#34;id&#34;:56},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.8 分离障碍与躯体障碍&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6184e95d96fc966e23dbcc58&#34;,&#34;id&#34;:57},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.9 进食和成瘾障碍&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/6184e96da23f996e6bc965bd&#34;,&#34;id&#34;:58},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：6.10 人格障碍&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/618ce187786a5c6e40578dc6&#34;,&#34;id&#34;:59},{&#34;requireEnroll&#34;:true,&#34;hidden&#34;:false,&#34;title&#34;:&#34;萌芽8期：答疑6.3&#34;,&#34;link&#34;:&#34;https://www.tangxinli.com/podcasts/618ce1d796fc966e23dc15e1&#34;,&#34;id&#34;:60}],&#34;liveVideo&#34;:{},&#34;remarks&#34;:&#34;&#60;p&#62;【缴费成功】【缴费成功】【缴费成功】&#60;/p&#62;\\n\\n&#60;p&#62;请务必加课程顾问为微信好友，把付费截图+真实姓名、手机号发给TA！&#60;/p&#62;\\n\\n&#60;p&#62;不然无法听课！&#60;/p&#62;\\n\\n&#60;p&#62;没加顾问的，加顾问微信号：txlkyzs5&#60;/p&#62;\\n\\n&#60;p&#62;加过无需重复添加！&#60;/p&#62;\\n&#34;,&#34;type&#34;:{&#34;domain&#34;:&#34;knowyourself&#34;,&#34;code&#34;:&#34;ky-course&#34;,&#34;name&#34;:&#34;KnowYourself&#34;,&#34;desc&#34;:&#34; &#34;,&#34;deleted&#34;:false,&#34;createdAt&#34;:null,&#34;updatedAt&#34;:null,&#34;id&#34;:13,&#34;parentId&#34;:0},&#34;pricings&#34;:[{&#34;activityId&#34;:544,&#34;price&#34;:3490,&#34;couponForSharing&#34;:0,&#34;quantity&#34;:1,&#34;points&#34;:0,&#34;city&#34;:&#34;网络&#34;,&#34;actStart&#34;:&#34;2021-04-08T10:00:00.000Z&#34;,&#34;status&#34;:null,&#34;remarks&#34;:&#34;价格&#34;,&#34;isMemberOnly&#34;:false,&#34;deleted&#34;:false,&#34;createdAt&#34;:&#34;2021-03-07T10:00:05.000Z&#34;,&#34;updatedAt&#34;:&#34;2021-03-07T10:00:05.000Z&#34;,&#34;id&#34;:2238}]},&#34;attendee&#34;:{&#34;pOrderId&#34;:null,&#34;pOrderNo&#34;:null,&#34;pRefunded&#34;:false,&#34;pAmountRefunded&#34;:0,&#34;pBalanceAmountPaid&#34;:0,&#34;pChannelAmountPaid&#34;:0,&#34;pChannel&#34;:null,&#34;pCouponAmount&#34;:0,&#34;pTimeExpire&#34;:null,&#34;timePaid&#34;:&#34;2021-04-02T14:02:01.000Z&#34;,&#34;userId&#34;:182686,&#34;userObjectId&#34;:&#34;6066b015dd6657225716f2c1&#34;,&#34;activityId&#34;:544,&#34;subject&#34;:&#34;八期:【糖心理×KnowYourself】心理咨询师·萌芽计划&#34;,&#34;body&#34;:null,&#34;description&#34;:null,&#34;pricingId&#34;:null,&#34;cxId&#34;:167686,&#34;cxName&#34;:&#34;糖心理×KY课程顾问8&#34;,&#34;isAssigned&#34;:true,&#34;assignedAt&#34;:&#34;2021-04-02T06:03:56.000Z&#34;,&#34;transactionCode&#34;:null,&#34;tradeNo&#34;:null,&#34;referrerName&#34;:null,&#34;referrerPhone&#34;:null,&#34;certified&#34;:true,&#34;userRemark&#34;:null,&#34;adminRemark&#34;:null,&#34;priceRemark&#34;:null,&#34;name&#34;:&#34;头顶渐渐微凉&#34;,&#34;city&#34;:null,&#34;gender&#34;:null,&#34;phone&#34;:&#34;13476217399&#34;,&#34;type&#34;:&#34;Activity&#34;,&#34;identityNo&#34;:null,&#34;wechatNo&#34;:null,&#34;qq&#34;:null,&#34;domain&#34;:&#34;knowyourself&#34;,&#34;price&#34;:0,&#34;totalCoupon&#34;:0,&#34;status&#34;:10,&#34;consumePoints&#34;:0,&#34;earnPoints&#34;:0,&#34;originalPrice&#34;:3490,&#34;finalPrice&#34;:0,&#34;externalPrice&#34;:3290,&#34;customType&#34;:&#34;default&#34;,&#34;customData&#34;:&#34;{\\&#34;name\\&#34;:\\&#34;头顶渐渐微凉\\&#34;,\\&#34;phone\\&#34;:\\&#34;13476217399\\&#34;,\\&#34;gender\\&#34;:\\&#34;男\\&#34;}&#34;,&#34;messagePending&#34;:false,&#34;source&#34;:null,&#34;deleted&#34;:false,&#34;createdAt&#34;:&#34;2021-04-02T16:29:07.000Z&#34;,&#34;updatedAt&#34;:&#34;2021-04-02T16:29:07.000Z&#34;,&#34;lastUpdate&#34;:&#34;2021-04-02T14:02:06.000Z&#34;,&#34;id&#34;:116047,&#34;statusName&#34;:&#34;报名成功&#34;,&#34;statusLabel&#34;:&#34;success&#34;,&#34;transactions&#34;:[],&#34;pricing&#34;:null},&#34;shared&#34;:false}")
+    ViewModels.$digest('env', '"production"')
+    ViewModels.$digest('title', '"八期:【糖心理×KnowYourself】心理咨询师·萌芽计划"')
+    ViewModels.$digest("_vue", "")
+    ViewModels.$digest('currentUser', "{&#34;id&#34;:182686,&#34;objectId&#34;:&#34;6066b015dd6657225716f2c1&#34;,&#34;username&#34;:&#34;wx_kmzvygkq_7828nyv&#34;,&#34;nickname&#34;:&#34;头顶渐渐微凉&#34;,&#34;email&#34;:null,&#34;emailVerified&#34;:false,&#34;phone&#34;:&#34;13476217399&#34;,&#34;phoneVerified&#34;:true,&#34;group&#34;:&#34;user&#34;,&#34;age&#34;:&#34;年龄未知&#34;,&#34;gender&#34;:&#34;男&#34;,&#34;portrait&#34;:&#34;https://thirdwx.qlogo.cn/mmopen/vi_32/oO5qc4JhBFhU9JUkFIJ9Ahx1NVpvXT8cKPDZn2iaLheaGedZZ5SX7Jua1jgUMvYaGXeVnuicoc1XO8uSAqtwPYKQ/132&#34;,&#34;status&#34;:null,&#34;banned&#34;:false,&#34;deleted&#34;:false,&#34;createdAt&#34;:&#34;2021-04-02T05:48:05.000Z&#34;,&#34;lastLogin&#34;:&#34;2021-12-20T02:02:11.405Z&#34;,&#34;isAdmin&#34;:false,&#34;isMember&#34;:false,&#34;isOps&#34;:false,&#34;isCX&#34;:false,&#34;groupName&#34;:&#34;用户&#34;,&#34;chatId&#34;:&#34;PR00182686&#34;,&#34;orgId&#34;:0,&#34;accessToken&#34;:&#34;&#34;,&#34;wechatId&#34;:&#34;oDgyWv9Zq-gNbpmJUz770Sk9tUQA&#34;,&#34;wxId&#34;:null,&#34;wxOpenId&#34;:&#34;oDgyWv9Zq-gNbpmJUz770Sk9tUQA&#34;,&#34;wxUnionId&#34;:&#34;o01ols5dSUKfzsvTNbxct7KJGX80&#34;}")
+    ViewModels.$digest('client', "")
+    ViewModels.$digest('clientAuth', "")
+    ViewModels.$digest('paginator', "{}")
+    ViewModels.$digest('jsApiConfig', "")
+  
+    console.log('* VM', ViewModels)
+  </script>
+    
+    <style>
+      body {
+        padding-top: 0;
+        padding-bottom: 4em;
+      }
+    </style>
+  <style type="text/css"></style></head>
+  
+  <body>
+    <div class="ky-header">KnowYourself</div>
+  <style>
+    .ky-header {
+      height: 44px;
+      line-height: 44px;
+      width: 100%;
+      background-color: #889db8;
+      color: white;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bolder;
+    }
+  </style>  <div id="course-detail" class="container ng-scope" style="padding: 1em;" ng-controller="CourseDetailCtrl">
+    <section class="activity-intro-section">
+      <!-- 报名成功提示信息 -->
+          <div class="alert alert-warning" id="remarks">
+        <p>【缴费成功】【缴费成功】【缴费成功】</p>
+  
+  <p>请务必加课程顾问为微信好友，把付费截图+真实姓名、手机号发给TA！</p>
+  
+  <p>不然无法听课！</p>
+  
+  <p>没加顾问的，加顾问微信号：txlkyzs5</p>
+  
+  <p>加过无需重复添加！</p>
+      </div>
+      
+      <div class="panel">
+        <div class="panel-body">
+          <div ng-controller="CourseHeaderCtrl" class="ng-scope">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="row">
+          <div class="col-sm-8 col-sm-push-4">
+            <h2 class="ng-binding">
+              八期:【糖心理×KnowYourself】心理咨询师·萌芽计划
+            </h2>
+            <p class="text-muted ng-binding">
+              2021年04月08日 18:00
+            </p>
+            <p class="text-muted">
+              <span ng-show="course.city" class="ng-binding">网络 线上</span>
+              <span ng-hide="course.city" class="ng-hide">在线活动</span>
+            </p>
+            <p>
+                        </p>
+          </div>
+          <div class="col-sm-4 col-sm-pull-8 hidden-xs">
+            <img class="thumbnail" src="/rect/lg?q=/tmp/c1986ce2dfab9e7d2c2b894a6238a297">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="course-price hidden-xs" ng-click="showRemarks()">
+          <h4 class="text-center">
+            <span ng-show="course.price > 0" class="ng-binding">
+              <i class="fa fa-jpy"></i> 3490 元/位
+            </span>
+            <span ng-hide="course.price > 0" class="ng-hide">免费活动</span>
+          </h4>
+        </div>
+        <div>
+          <button type="button" class="btn btn-md btn-warning btn-block ng-hide" ng-click="enroll()" ng-show="course.status == 1 &amp;&amp; !attendee.id">点击报名</button>
+  
+          <button type="button" class="btn btn-md btn-success btn-block" ng-click="enroll()" ng-show="course.status == 1 &amp;&amp; attendee.id">报名成功 (查看报名信息)</button>
+  
+          <button type="button" class="btn btn-md btn-default btn-block ng-hide" ng-show="course.status !== 1" disabled="">报名结束</button>
+  
+          <div ng-show="course.status !== 1 &amp;&amp; attendee.status === 10" class="ng-hide">
+            <button type="button" class="btn btn-md btn-default btn-block" ng-click="enroll()">查看报名信息</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4" ng-show="course.customData.isLinkActive &amp;&amp; isEnrolled">
+        <div class="" style="margin-top:15px;">
+          <a type="button" class="btn btn-md btn-warning btn-block" ng-href="https://www.tangxinli.com/livestreams/606d6889b2ed5f2273214a00" href="https://www.tangxinli.com/livestreams/606d6889b2ed5f2273214a00">
+            观看直播
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .course-panel {
+      font-size: 18px;
+    }
+  
+    .course-title {
+      font-size: 18px;
+      width: 100%;
+      line-height: 24px;
+      height: 48px;
+      overflow: hidden;
+      position: relative;
+    }
+  
+    .course-panel .course-info {
+      font-size: 12px;
+    }
+  
+    @media(min-width: 768px) {
+      .course-panel .course-info {
+        height: 130px;
+        overflow: hidden;
+      }
+    }
+  
+    .course-panel .status-label {
+      display: block;
+      width: 100%;
+      font-size: 14px;
+      border-radius: 0;
+    }
+  
+    .course-price {
+      margin-bottom: 8px;
+      padding: 24px 12px;
+      background-color: #eee;
+      border-radius: 5px;
+    }
+  
+    .course-content {
+      word-wrap: break-word;
+      word-break: normal;
+    }
+  
+    @media(max-width: 768px) {
+      .course-content p img {
+        width: 100%;
+      }
+    }
+  
+    .course-cert-info {
+      border-top: solid 1px #eee;
+      padding-top: 8px;
+    }
+  </style>
+  
+  <script>
+    angular
+      .module('tangxl')
+      .controller('CourseHeaderCtrl', [
+        '$scope',
+        '$interval',
+        function ($scope, $interval) {
+          $scope.course = ViewModels.course || {};
+          $scope.attendee = ViewModels.attendee || {};
+          $scope.isEnrolled = $scope.attendee.status === 10
+  
+          /* CountDownTimer */
+          var ONE_SEC = 1000;
+          var ONE_MIN = ONE_SEC * 60;
+          var ONE_HOUR = ONE_MIN * 60;
+          var ONE_DAY = ONE_HOUR * 24;
+  
+          $scope.startTime = new Date($scope.course.actStart);
+          $scope.endTime = new Date($scope.course.actEnd);
+          $scope.now = new Date();
+          $scope.isEnd = ($scope.endTime < $scope.now) ? true : false;
+          $scope.isStart = ($scope.startTime < $scope.now && $scope.endTime > $scope.now) ? true : false;
+  
+          $scope.moment = moment;
+  
+          $scope.formatCountdown = function (counter) {
+            var days = Math.floor(counter / ONE_DAY);
+            var hours = Math.floor((counter % ONE_DAY) / ONE_HOUR);
+            var minutes = Math.floor((counter % ONE_HOUR) / ONE_MIN);
+            var seconds = Math.floor((counter % ONE_MIN) / ONE_SEC);
+            return days + '天' + hours + '小时' + minutes + '分' + seconds + '秒';
+          };
+  
+          $scope.stopCountDown = function () {
+            if (angular.isDefined($scope.countDownTimer)) {
+              $interval.cancel($scope.countDownTimer);
+              $scope.countDownTimer = undefined;
+            }
+          };
+  
+          if (!$scope.isEnd) {
+            var counter = $scope.startTime - $scope.now;
+            $scope.countDown = $scope.formatCountdown(counter)
+            $scope.countDownTimer = $interval(function () {
+              if (counter <= ONE_SEC) {
+                $scope.isStart = true;
+                $scope.countDown = '0天0小时0分0秒';
+                return $scope.stopCountDown();
+              }
+              $scope.countDown = $scope.formatCountdown(counter);
+              counter -= ONE_SEC;
+            }, ONE_SEC);
+          }
+          /* End of CountDownTimer*/
+  
+          $scope.toLive = function () {
+            location.href = $scope.course.customData.linkUrl;
+          };
+  
+          $scope.enroll = function () {
+            axios.get('/home/session')
+              .then(function (res) {
+                if (!res.data.phone && !res.data.skipPhone) {
+                  location.href = '/passport/phone?state=' + encodeURIComponent(location.href)
+                }
+                $('.enroll-container').scope().showPrice();
+              })
+              .catch(function (err) {
+                alert('系统错误，请联系管理员')
+                console.log("err", err)
+              })
+            // 
+          };
+        }])
+  </script>
+  
+  <form class="form-horizontal enroll-container ng-scope ng-pristine ng-valid ng-valid-required" ng-controller="CourseEnrollCtrl">
+  
+    <div class="modal fade pricing-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title">请确认报名价格</h4>
+          </div>
+          <table class="table table-striped">
+            <tbody><!-- ngRepeat: pricing in course.pricings --><tr ng-repeat="pricing in course.pricings" ng-show="!pricing.deleted" class="ng-scope">
+              <td>
+                <span class="padding-md padding-h ng-binding">
+                  ￥3,490.00元
+                  /
+                  1人
+                </span>
+              </td>
+              <td class="ng-binding">
+                价格
+              </td>
+              <td>
+                <a class="btn btn-sm btn-warning" ng-disabled="pricing.isMemberOnly &amp;&amp; !user.isMember" ng-click="choosePrice(pricing)">选择</a>
+              </td>
+            </tr><!-- end ngRepeat: pricing in course.pricings -->
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal fade rules-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title"><strong>糖心理课程相关规定</strong></h4>
+          </div>
+          <div class="modal-body">
+            <p>&nbsp;</p>
+            <h3 class="text-center"><strong>一、【群规】</strong></h3>
+            <p>&nbsp;</p>
+  
+            <p>1、上课群严格禁言，以便爬楼。有任何疑问请私信客服。禁言期间多次发言或不听劝阻，将被移出本群。</p>
+            <p>2、上课群及讨论群严禁外部链接、广告、求赞等一切内容，违反群规会被移出群，情节严重直接取消听课资格。</p>
+            <p>3、讨论群仅限讨论课程内容，加深学习深度，无关内容刷屏者，移出群聊。</p>
+            <p>4、未经许可往群内拉人，建私群，擅自添加、骚扰其他用户等行为，将被直接移出本群，情节严重直接取消听课资格。</p>
+  
+            <p>&nbsp;</p>
+            <h3 class="text-center"><strong>二、【录音、录像复听说明】</strong></h3>
+            <p>&nbsp;</p>
+  
+            <p>
+              1、直播课程的录音、录像会在单次课程结束后，次日18点前放出。直播和录播课程的收看（听）有效期默认持续到整个课程结束后的5年。5年后，录像（音）失效。招生时对回看设置有特别说明的课程，以招生文案中回看时限为准。
+            </p>
+            <p>2、节假日、双休日等，更新录像（音）的时间会顺延到下个工作日18点。即节假日期间，不更新录像（音）。</p>
+  
+            <p>&nbsp;</p>
+            <h3 class="text-center"><strong>三、【录音及相关资料】</strong></h3>
+            <p>&nbsp;</p>
+  
+            <p>课程内容，包括但不限于录音、视频以及文字稿，版权归糖心理所有，严禁私自盗录，私下传播（包括在上课群或讨论群传播）。</p>
+  
+            <p>&nbsp;</p>
+            <h3 class="text-center"><strong>【关于督导类课程】</strong></h3>
+            <p>&nbsp;</p>
+  
+            <p>为最大程度保护案例涉及的来访者和学员的隐私，并为咨询师创设良好的学习氛围，确定以下保密协议：</p>
+            <p>&nbsp;</p>
+            <p>1、确认同意本协议以确保案例隐私的保密性。</p>
+            <p>2、线上授课、案例督导等环节所涉及的案例内容，仅限于课程时间内的学术交流。课堂外的任何场合不得引用、谈论课堂案例以及讨论内容。</p>
+            <p>3、学员均应对学习中涉及的案例信息进行严格保密。如有泄漏，造成不良后果，责任自负。</p>
+            <p>4、本次课程全程禁止任何形式的私自录音、录像、外传等。禁止使用个案的素材，禁止发布或传播案例部分的文字记录和课程逐字稿。</p>
+            <p>注：因此类课程为专业课程，报名学员需提供相关执业资质证明。</p>
+            <p>一经发现，取消听课资格，情节严重者，我们将追究法律责任。</p>
+  
+            <p>&nbsp;</p>
+            <h3 class="text-center"><strong>四、【退款说明】</strong></h3>
+            <p>&nbsp;</p>
+  
+            <p>1、报名费用一经缴纳，不接受以任何原因要求退费，但可以在开课前办理退让。</p>
+            <p>2、因故无法完成课程，可于开课前一周转让给其他学员。转让需告知糖心理客服，经客服确认方可转让成功。</p>
+            <p>3、所有课程的转让，一定要先联系客服。确认后，双方结清费用，并通知客服为接收方办理补报名手续。</p>
+            <p>4、如果课程的转让方是会员，接收方是非会员。接收课程方，需要按此课程的最低会员与非会员差价，补给客服。</p>
+            <p>5、为了防止倒卖，课程不得以任何原因加价转让。客服有权拒绝为加价课办理转让手续。</p>
+            <p>6、为课程为实名制报名，报名后只能由本人去现场上课，且中途不得换人。</p>
+            <p>所有的课程及活动，糖心理拥有最终解释权。</p>
+  
+            <p>&nbsp;</p>
+            <h3 class="text-center"><strong>五、【充值金使用规则】</strong></h3>
+            <p>&nbsp;</p>
+  
+            <p>1、2021年618活动期间充值的余额，使用范围为糖心理及有解We Get平台在售的所有可使用充值金课程的付费（可参照充值时的规则说明）；</p>
+            <p>2、使用方法：在相关课程的报名链接里，在进入支付界面后直接勾选“使用余额”选项支付订单；</p>
+            <p>3、充值金的使用不设置时限，可永久有效；</p>
+            <p>4、充值金原则上仅限本人使用；</p>
+            <p>5、使用充值金购买的课程，如需转让，请直接联系客服处理。转让方已支付的费用，将根据原路返回的原则 ，返回至原充值账户；</p>
+            <p>6、使用充值金购买课程，自己支付部分的金额可申请 开具发票。赠送余额的部分，则没法提供发票；</p>
+            <p>7、充值一经完成，将不接受任何形式的退费申请；</p>
+            <p>8、如有其他未尽事宜，糖心理拥有最终解释权。</p>
+  
+            <p>&nbsp;</p>
+            <p>
+              学员应仔细、谨慎阅读《知情同意书》及《须知》，如有异议请勿点击“同意”或“接受”，<span><strong><u>点击“同意”或“接受”即表示您已充分阅读、理解并接受“须知”的全部内容。</u></strong></span>如您与“糖心理×KY”发生争议的，适用《须知》及《知情同意书》或其他您与“糖心理×KY”达成的其他协议。
+            </p>
+            <p>&nbsp;</p>
+            <p><span><strong><u>阅读协议的过程中，如果您不同意“须知”或其他相关协议或其中任何条款约定，您应立即停止注册程序。</u></strong></span></p>
+            <p>&nbsp;</p>
+  
+            <a class="btn btn-warning btn-block" ng-click="gotoContact()">
+              我已阅读并同意遵守上述规定
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- edit contact -->
+    <div class="modal fade contact-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title">请填写联系方式</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="col-sm-3 control-label">
+                <i class="text-danger">*</i> 真实姓名：</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control ng-pristine ng-valid ng-valid-required" ng-model="customData.name" required="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label">
+                <i class="text-danger">*</i> 手机号：</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control ng-pristine ng-valid ng-valid-required" ng-model="customData.phone" required="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label">
+                <i class="text-danger">*</i> 微信号：</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control ng-pristine ng-valid" ng-model="customData.wechatNo">
+                <small>不知道微信号请填写“没有”</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label">推荐人：</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control ng-pristine ng-valid" ng-model="customData.refererName">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label">推荐人电话：</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control ng-pristine ng-valid" ng-model="customData.refererPhone">
+              </div>
+            </div>
+            <div class="form-group ng-hide" ng-show="isQQCourse">
+              <label class="col-sm-3 control-label">
+                QQ号：</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control ng-pristine ng-valid" ng-model="customData.qq">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label">性别：</label>
+              <div class="col-sm-9">
+                <label class="radio-inline">
+                  <input type="radio" value="男" ng-model="customData.gender" class="ng-pristine ng-valid" name="005"> 男
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="女" ng-model="customData.gender" class="ng-pristine ng-valid" name="006"> 女
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label">所在地：</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control ng-pristine ng-valid" ng-model="customData.city">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label">备注：</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control ng-pristine ng-valid" ng-model="customData.remarks">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-6 col-sm-offset-3">
+                <a class="btn btn-md btn-block btn-warning" ng-click="saveContact()">确定</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- edit price -->
+    <div class="modal fade price-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title">确认订单信息</h4>
+          </div>
+          <div class="modal-body">
+            <table class="table table-striped">
+              <tbody><tr>
+                <td class="text-right">联系人：</td>
+                <td class="ng-binding">
+                  头顶渐渐微凉
+                </td>
+                <td>
+                  <i class="fa fa-pencil" ng-click="gotoContact()"></i>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right">手机：</td>
+                <td class="ng-binding">
+                  13476217399
+                </td>
+                <td>
+                  <i class="fa fa-pencil" ng-click="gotoContact()"></i>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right">微信号：</td>
+                <td class="ng-binding">
+                  
+                </td>
+                <td>
+                  <i class="fa fa-pencil" ng-click="gotoContact()"></i>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right">订单价格：</td>
+                <td>
+                  <b class="text-warning ng-binding">￥0.00元</b>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="text-right">备注：</td>
+                <td class="ng-binding">
+                  
+                </td>
+                <td>
+                  <i class="fa fa-pencil" ng-click="gotoContact()"></i>
+                </td>
+              </tr>
+            </tbody></table>
+            <hr>
+            <div class="row">
+              <div class="col-md-12">
+                <div>应付金额：<b class="text-warning ng-binding">￥0.00元</b></div>
+              </div>
+              <hr>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <button class="btn btn-md btn-block btn-warning" ng-click="confirmOrder()" ng-disabled="isLoading">提交订单</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- show result -->
+    <div class="modal fade result-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title">
+              <label class="text-success">
+                报名成功
+              </label>
+            </h4>
+          </div>
+          <table class="table table-striped">
+            <tbody><tr>
+              <td class="text-right">联系人：</td>
+              <td class="ng-binding">
+                头顶渐渐微凉
+              </td>
+              <!-- ngIf: attendee.status !== 10 -->
+            </tr>
+            <tr>
+              <td class="text-right">手机：</td>
+              <td class="ng-binding">
+                13476217399
+              </td>
+              <!-- ngIf: attendee.status !== 10 -->
+            </tr>
+            <tr>
+              <td class="text-right">微信号：</td>
+              <td class="ng-binding">
+                
+              </td>
+              <!-- ngIf: attendee.status !== 10 -->
+            </tr>
+            <tr ng-show="customData.qq" class="ng-hide">
+              <td class="text-right">QQ号：</td>
+              <td class="ng-binding">
+                
+              </td>
+              <!-- ngIf: attendee.status !== 10 -->
+            </tr>
+            <tr ng-show="customData.remarks" class="ng-hide">
+              <td class="text-right">备注：</td>
+              <td class="ng-binding">
+                
+              </td>
+              <!-- ngIf: attendee.status !== 10 && attendee.status !== 2 -->
+            </tr>
+            <tr>
+              <td class="text-right">报名费：</td>
+              <td>
+                <b class="ng-binding">
+                  ￥0.00元</b>
+              </td>
+              <td></td>
+            </tr>
+            <tr ng-show="shared &amp;&amp; course.couponForSharing" class="ng-hide">
+              <td class="text-right">转发优惠：</td>
+              <td>
+                <b class="ng-binding">
+                  ￥-0.00元</b>
+              </td>
+              <td></td>
+            </tr>
+            <tr ng-show="shared &amp;&amp; course.couponForSharing" class="ng-hide">
+              <td class="text-right">待付金额：</td>
+              <td>
+                <b class="text-warning ng-binding">
+                  ￥0.00元</b>
+              </td>
+              <td></td>
+            </tr>
+            <tr ng-show="attendee.transaction.tradeNo
+                      &amp;&amp; attendee.transaction.gateway == 'bank'" class="ng-hide">
+              <td class="text-right">
+                支付单号：
+              </td>
+              <td>
+                <b class="text-warning ng-binding">
+                  </b>
+              </td>
+              <td>
+                <i class="fa fa-pencil ng-hide" ng-click="gotoPayment()" ng-hide="attendee.status == 10"></i>
+              </td>
+            </tr>
+          </tbody></table>
+  
+          <div class="modal-body">
+            <!-- 糖心理支付链接 -->
+            <div class="form-group ng-hide" ng-show="attendee.status == 1">
+              <div class="col-xs-12">
+                <a class="btn btn-md btn-success btn-block" ng-href="/home/attendees/116047/p_prepay" target="_blank" href="/home/attendees/116047/p_prepay">
+                  <b>在线支付</b>
+                </a>
+                <hr>
+              </div>
+  
+              <div class="col-xs-12">
+                <a class="btn btn-md btn-default btn-block ng-hide" ng-show="attendee.status == 1" ng-click="gotoPayment()">
+                  银行转账
+                </a>
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <div class="col-sm-8 col-sm-offset-2" ng-show="attendee.id">
+                <p class="text-center">
+                </p><div ng-show="attendee.status == 2" class="ng-binding ng-hide">
+                  您已报名成功，如果您已经付款，客服会在24小时内为您开通相关服务，请耐心等待
+                </div>
+                <div ng-show="attendee.status == 10" class="">
+                  <div class="text-center ng-binding" style="margin-bottom: 15px;">你已成功报名！请届时准时参加活动</div>
+                  <div class="text-center center-block" id="orderQRCode"></div>
+                </div>
+                <p></p>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- edit payment note -->
+    <div class="modal fade bank-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title">
+              <i class="fa fa-chevron-left pull-left" ng-click="gotoResult()"></i>
+              银行转账
+            </h4>
+          </div>
+          <div class="modal-body">
+            <p class="alert alert-warning"><span style="color:red;">*</span>此种支付方式花费时间较长，建议您选择微信支付</p>
+            <p class="ng-binding">
+              请支付3490元到以下账户
+            </p>
+            <table class="table">
+              <tbody><tr>
+                <td>银行账号</td>
+                <td><b>7559 3860 0010 802</b></td>
+              </tr>
+              <tr>
+                <td>户名</td>
+                <td><b>心跃信息科技（上海）有限公司</b></td>
+              </tr>
+              <tr>
+                <td>开户行</td>
+                <td><b>招商银行高安支行</b></td>
+              </tr>
+            </tbody></table>
+            <p>
+            </p><h4><b>转账后，请联系客服！</b></h4>
+            <p></p>
+            <p>
+              <small>若还没有客服好友，请添加客服微信号:txlkefu46</small>
+            </p>
+  
+            <div class="form-group">
+              <div class="col-sm-8">
+                <input type="text" class="form-control hidden ng-pristine ng-valid" ng-model="attendee.transaction.tradeNo">
+              </div>
+              <!--<div class="col-sm-4 col-sm-offset-4">
+                <a class="btn btn-md btn-block btn-warning"
+                   ng-click="savePayment()">确认</a>
+              </div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  
+  <script src="https://static.tangxinli.com/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script>
+    angular
+      .module('tangxl')
+      .controller('CourseEnrollCtrl', function($scope, $resource) {
+        $scope.isWechat = isWechatClient();
+        $scope.course = ViewModels.course || {};
+        $scope.shared = !!ViewModels.shared;
+        $scope.agreed = false;
+  
+        if ($scope.course.type) {
+          $scope.isDxtCourse = $scope.course.domain == 'daxuetang';
+          $scope.isQQCourse = !!$scope.course.type.code.match(/qq/g);
+        }
+  
+        if ($scope.isDxtCourse) {
+          $scope.wechatContact = '搜索“糖心理”或“txldaxuetang”'
+        } else {
+          $scope.wechatContact = '搜索“糖心理”或“tangxinli2014”';
+        }
+  
+        $scope.user = ViewModels.user || {};
+        $scope.visitor = {
+          mode: 'fast',
+          nickname: '',
+          phone: '',
+        };
+  
+        $scope.attendee = ViewModels.attendee || {};
+        $scope.source = ViewModels.source || '';
+        $scope.currentPricing = $scope.attendee.pricing || {};
+  
+        $scope.messages = {
+          Pending: '您已报名成功，如果您已经付款，客服会在24小时内为您开通相关服务，请耐心等待',
+          Success: '你已成功报名！请届时准时参加活动'
+        };
+  
+        $scope.initCustomData = function() {
+          $scope.customData = null;
+  
+          var defaultData = {
+            name: $scope.attendee.name || $scope.user.nickname || '',
+            phone: $scope.attendee.phone || $scope.user.phone || '',
+            gender: $scope.user.gender || '',
+            wechatNo: $scope.user.wechatNo || '',
+            qq: $scope.user.qq || '',
+            city: '',
+          };
+  
+          if ($scope.attendee.customData) {
+            try {
+              $scope.customData = JSON.parse($scope.attendee.customData);
+            } catch (e) {
+            }
+          }
+          $scope.customData = $scope.customData || defaultData;
+        }
+  
+        $scope.initCustomData();
+  
+        $scope.loadQRCode = function() {
+          $scope.qrcode = new QRCode(document.getElementById('orderQRCode'), {
+            text: 'https://www.tangxinli.com/verification/orders/' + $scope.attendee.pOrderNo,
+            width: 128,
+            height: 128,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+          });
+          var imgClasses = document.querySelector('#orderQRCode > img').classList
+          imgClasses.add('center-block');
+        }
+  
+        if ($scope.attendee.pOrderNo) {
+          $scope.loadQRCode();
+        }
+  
+  
+        $scope.statusNames = {
+          1: '未支付',
+          2: '待确认',
+          10: '已支付',
+        }
+  
+        $scope.genders = ['男', '女'];
+  
+        $scope.getStatusName = function(status) {
+          return $scope.statusNames[status] || '未知状态';
+        }
+  
+        $scope.steps = {
+          'SelectPricing': '.pricing-modal',
+          'ShowRules': '.rules-modal',
+          'EditContact': '.contact-modal',
+          'ConfirmOrder': '.price-modal',
+          'EditTradeNo': '.bank-modal',
+          'ShowResult': '.result-modal'
+        };
+        $scope.currentStep = null;
+  
+        $scope.gotoStep = function(name) {
+          var targetStep = $scope.steps[name];
+          if (!targetStep) return;
+  
+          if ($scope.currentStep && $scope.currentStep != targetStep && !$($scope.currentStep).is(':hidden')) {
+            $scope.prevStep = $scope.currentStep;
+            $scope.currentStep = targetStep;
+  
+            $($scope.currentStep).on('shown.bs.modal', function(e) {
+              $($scope.prevStep).off('hidden.bs.modal');
+            })
+  
+            $($scope.prevStep).on('hidden.bs.modal', function(e) {
+              $($scope.currentStep).modal();
+            }).modal('hide');
+          } else {
+            $scope.currentStep = targetStep;
+            $($scope.currentStep).modal();
+          }
+        }
+  
+        $scope.checkUser = function() {
+          if ($scope.user.id) return true;
+  
+          window.location.href = '/passport/login?state=' + encodeURIComponent(window.location.pathname);
+        }
+  
+        $scope.showPrice = function() {
+          if (!$scope.checkUser()) return;
+  
+          if ($scope.attendee && $scope.attendee.id) {
+            $scope.gotoResult();
+          } else if ($scope.course.pricings.length == 1) {
+            $scope.choosePrice($scope.course.pricings[0]);
+          } else {
+            $scope.gotoStep('SelectPricing');
+          }
+        }
+  
+        $scope.choosePrice = function(pricing) {
+          if (!$scope.checkUser()) return;
+          if (pricing.isMemberOnly && !$scope.user.isMember) return alert('您还未成为会员，如有疑问请联系客服');
+  
+          if (pricing) $scope.currentPricing = pricing;
+  
+          $scope.isGroup = /团体报名/.test($scope.currentPricing.remarks);
+  
+          if (!$scope.attendee || !$scope.attendee.id) {
+            $scope.showRules();
+          } else {
+            $scope.gotoResult();
+          }
+        }
+  
+        $scope.showRules = function() {
+          if ($scope.isDxtCourse) {
+            $scope.gotoStep('ShowRules');
+          } else {
+            $scope.gotoContact();
+          }
+        }
+  
+        $scope.gotoContact = function() {
+          $scope.gotoStep('EditContact');
+        }
+  
+        $scope.saveContact = function() {
+          if (!$scope.customData.name) return showTip('请填写姓名');
+          if (!$scope.customData.phone) return showTip('请填写手机号');
+          if ($scope.isDxtCourse && !$scope.customData.wechatNo) return showTip('请填写微信号');
+  
+          $scope.gotoStep('ConfirmOrder');
+        }
+  
+        $scope.confirmOrder = function() {
+          if (!$scope.customData.name) return showTip('请填写姓名');
+          if (!$scope.customData.phone) return showTip('请填写手机号');
+          if ($scope.isDxtCourse && !$scope.customData.wechatNo) return showTip('请填写微信号');
+  
+          $scope.enroll($scope.currentPricing);
+        }
+  
+        $scope.isLoading = false;
+        $scope.enroll = function(pricing) {
+          if ($scope.isLoading) return;
+          $scope.isLoading = true;
+  
+          var Enrollment = $resource('/~/pricings/' + pricing.id + '/enroll?source=' + $scope.source);
+          var options = {
+            name: $scope.customData.name,
+            phone: $scope.customData.phone,
+            gender: $scope.customData.gender,
+            userRemark: $scope.customData.remarks,
+            city: $scope.customData.city,
+            customData: $scope.customData,
+            customType: 'default'
+          }
+  
+          Enrollment.save(options, function(res) {
+            $scope.isLoading = false;
+            if (res.error) return showMsg(res.error);
+  
+            $scope.attendee = res;
+            $scope.loadQRCode();
+            $scope.initCustomData();
+            $scope.gotoResult();
+          })
+        }
+  
+        $scope.gotoPayment = function() {
+          $scope.gotoStep('EditTradeNo');
+        }
+  
+        $scope.savePayment = function() {
+          var Enrollment = $resource('/home/attendees/:aid', { 'aid': '@id' });
+          Enrollment.save($scope.attendee, function(res) {
+            if (res.error) return showTip(res.error);
+  
+            $scope.attendee = res.data;
+            $scope.loadQRCode();
+            showTip($scope.messages.Pending);
+            $scope.gotoResult();
+          })
+        }
+  
+        $scope.gotoResult = function() {
+          if (!$scope.attendee || !$scope.attendee.phone) return $scope.gotoContact();
+  
+          $scope.gotoStep('ShowResult');
+        }
+  
+        $scope.wechatPay = function() {
+          var state = window.location.pathname + window.location.search;
+          window.location.href = '/wechat/payment?attd=' + $scope.attendee.id + '&state=' + encodeURIComponent(state);
+        }
+  
+        if ($scope.isWechat) {
+          $scope.checkUser();
+        }
+      })
+  </script>
+        </div>
+      </div>
+    </section>
+  
+    <section class="activity-section">
+      <div class="row">
+        <div class="col-sm-8">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" ng-class="tabClass('detail')" class="">
+              <a href="#detail" aria-controls="detail" role="tab" data-toggle="tab" aria-expanded="false">
+                <i class="fa fa-info-circle"></i> 介绍</a>
+            </li>
+            <li role="presentation" ng-class="tabClass('video')" class="active">
+              <a href="#video" aria-controls="video" role="tab" data-toggle="tab" aria-expanded="true">
+                <i class="fa fa-video-camera"></i> 视频</a>
+            </li>
+            <li role="presentation" ng-class="tabClass('attachment')" class="">
+              <a href="#attachment" aria-controls="attachment" role="tab" data-toggle="tab" aria-expanded="false">
+                <i class="fa fa-th-list"></i> 课件</a>
+            </li>
+            <li role="presentation" ng-class="tabClass('expert')">
+              <a href="#expert" aria-controls="expert" role="tab" data-toggle="tab">
+                <i class="fa fa-user"></i> 讲师</a>
+            </li>
+          </ul>
+  
+          <!-- Tab panes -->
+          <div class="tab-content" style="margin-top: 1.5em">
+            <div role="tabpanel" class="tab-pane" ng-class="tabClass('detail')" id="detail">
+              <div class="course-content">
+                <p style="text-align:center">&nbsp;</p>
+  
+  <p style="text-align:center"><img alt="" src="/imgcache/8/v/8vdol83_klc15fk2" style="width:100%"><img alt="" src="/imgcache/2/z/2zy902m_klc15frb" style="width:100%"><img alt="" src="/imgcache/r/8/r8fvuhn_klc15fwm" style="width:100%"><img alt="" src="/imgcache/c/h/ch7evl5_klc15g3n" style="width:100%"><img alt="" src="/imgcache/e/k/ek87ez8_klc15ga8" style="width:100%"><img alt="" src="/imgcache/u/t/ut0jsqa_klc15gfg" style="width:100%"><img alt="" src="/imgcache/q/o/qoat02o_klc15gld" style="width:100%"><img alt="" src="/imgcache/k/p/kpae68d_klc15grl" style="width:100%"><img alt="" src="/imgcache/g/s/gslsid7_klc15gxw" style="width:100%"><img alt="" src="/imgcache/3/h/3h2uljp_klc15h3b" style="width:100%"><img alt="" src="/imgcache/3/h/3h3lxh1_klc15h9a" style="width:100%"><img alt="" src="/imgcache/b/0/b0l4cu3_klc15he4" style="width:100%"><img alt="" src="/imgcache/u/w/uwrvce5_klc15him" style="width:100%"><img alt="" src="/imgcache/v/2/v23oasp_klc15hnb" style="width:100%"><img alt="" src="/imgcache/p/9/p92vifd_klc15ht4" style="width:100%"><img alt="" src="/imgcache/w/i/wigbcuh_klc15hzd" style="width:100%"></p>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane active" ng-class="tabClass('video')" id="video">
+              <script src="https://player.polyv.net/script/polyvplayer.min.js"></script>
+  
+  <div ng-controller="CourseAttachmentCtrl" class="ng-scope">
+    <div class="panel ng-hide" ng-show="course.attachments.length || course.classroomUrl || enableLiveButton">
+      <div class="panel-body">
+        <div class="hidden-xs">
+          <h3 class="text-center">课堂信息</h3>
+          <hr>
+        </div>
+        <!-- ngRepeat: attachment in course.attachments -->
+        <a class="btn btn-info btn-block ng-hide" ng-href="/dxt/courses/544/live" ng-show="enableLiveButton" target="_blank" href="/dxt/courses/544/live">
+          观看直播
+          <i class="fa fa-video-camera"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <script type="text/javascript">
+    (function (angular) {
+      angular
+        .module('tangxl')
+        .controller('CourseAttachmentCtrl', [
+          '$scope',
+          function ($scope) {
+  
+            $scope.course = ViewModels.course || {};
+            $scope.attendee = ViewModels.attendee || {};
+  
+            $scope.play = function () {
+              if (this.attachment.inited) {
+                return;
+              }
+  
+              polyvObject('#' + this.attachment.vid).videoPlayer({
+                'width': '100%',
+                'height': '225',
+                'vid': this.attachment.vid,
+                'df': '1',
+              });
+              this.attachment.inited = true;
+            };
+  
+            if ($scope.attendee.status === 10) {
+              if ($scope.course.liveVideo.isEnable) {
+                if (!$scope.course.customData) {
+                  $scope.course.customData = {};
+                }
+  
+                var startTime = $scope.course.customData.liveStart || $scope.course.actStart;
+                var endTime = $scope.course.customData.liveEnd || $scope.course.actEnd;
+  
+                var startDate = moment(startTime, 'YYYY-MM-DD HH:mm').toDate();
+                var endDate = moment(endTime, 'YYYY-MM-DD HH:mm').toDate();
+                var now = new Date();
+                if (startDate < now && now < endDate) {
+                  $scope.enableLiveButton = true;
+                }
+              }
+            }
+          }]);
+    })(window.angular)
+  </script>            <small>
+    * 点击下方课程章节查看课程视频
+  </small>
+  <div class="list-group" style="margin-top: 1em;">
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/606d535cdeb2bc229e6af45a" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：1.1 心理学入门  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/606ea7ad5a85d22252a51e44" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：1.2 大脑与行为  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/606fe0bf6e4e622e0b36825f" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：1.3 感觉与知觉  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/606fe0d869e7e41e6d60f770" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：答疑1.1  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/606fe0e236ee552de349c38e" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：1.4 注意力与记忆力  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/606fe0f3e307c22e20042485" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：1.5 动机与情绪  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60766494b2b387403fd1051c" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：1.6 发展心理学：认知  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/607664a81a16d33ff676a06e" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：1.7 发展心理学：依恋  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/607664c3c0ca65405fd95487" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：答疑1.2  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/607664d60591654010545213" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：1.8 个性与人格  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/607676ffc0ca65405fd9557a" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：1.9 社会心理学  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/6076b4bb1a16d33ff676a321" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：1.10 压力与健康  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/6080f7844d766140302581db" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：答疑1.3  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/6080f7c690edd1401f6d19f4" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：2.1 心理咨询职业伦理守则  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/6080f83dcb005c2e2b512968" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：2.2 临床实践中的设置与伦理议题  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/608243be2842fc4535c4199d" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：答疑2.1  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/608244041a85e14515abd616" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：3.1 心理咨询发展史与流派简介  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/608244141a85e14515abd617" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：3.2 精神分析理论与方法  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/608638a405916540105553d7" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：3.3 行为主义理论与方法  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60863929cb005c2e2b51abed" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：3.4 认知学派理论与方法  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/6089281ba5d2d87dc18f4e87" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：答疑3.1  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/608928685689137acfe8caf9" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：3.5 存在-人本主义理论与方法  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/608928a81ddbe152837681ff" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：3.6 人本主义心理治疗  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/6098f644eeae405888038124" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：3.7 格式塔心理治疗  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/6098f6b8eff8e01aa993132c" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：3.8 家庭心理治疗  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/6098f692bf2ebe1a71b46d3a" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：答疑3.2  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60ae0e261a323009662bf300" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：3.9 整合性心理治疗  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60ae0e8e937ea009b73ca401" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：3.10 其他心理治疗理论与方法  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60b075d20b40953537689662" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：4.1 总述：心理咨询的面谈技术  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60ae0ec50e32a0098aa4bc91" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：答疑3.3  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60b0761a9f3edf35579a5718" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：4.2 情绪反馈技术  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60b0762947bdc133ed66038d" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：4.3 常用的提问技术  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60ed4aedbea01b2e123e81a6" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：4.4 面质  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60ed4b8e05a23d2decd0008a" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：答疑4.1  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60ed4af3ddb9852dd24bc79b" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：4.5 澄清  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60ed4bd1ad4e8d2dc1724773" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：4.6 空椅子技术  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60ed4c2305a23d2decd00092" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：4.7 诠释技术  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60ed4c55ad4e8d2dc172477c" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：答疑4.2  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60f1298a10125d09566dc624" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：4.8 自我觉察技术  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60f1299cb26bd90931fb77bb" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：4.9 共情能力的提高  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60f129adeeb8850974ff63a0" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：4.10 建议，作业布置，协同治疗，转介  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60f12ec4685ae4095bf3ea3c" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：答疑4.3  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60f67ea610125d09566df52b" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：5.1 心理咨询的设置  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60f67ebb247a270947680997" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：5.2 初始访谈  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60f79dec05a23d2decd064b1" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：5.3 咨访关系  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60f79e499b0b622dbb3d5d48" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：5.4 心理咨询中的个案概念化  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60f79e88ad4e8d2dc172a41e" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：5.5 危机干预  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/60f79eb7ddb9852dd24c2818" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：答疑5.1  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/614bf3172f5d533bafadd454" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：6.1 诊断与DSM5  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/614bf36b4c1f523b6f30be18" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：6.2 精神分裂症谱系  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/61500ccec468303b80565bf9" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：6.3 抑郁障碍  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/61500cf68533883b4aabf927" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：6.4 双相及相关障碍  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/61500ced2f5d533bafadf747" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：答疑6.1  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/61500d041e42033b4582a4a5" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：6.5 强迫症及相关障碍  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/617b8050a76dcd6e75f6d9b0" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：6.6 焦虑障碍  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/61820aab4c63046e5178cbce" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：答疑6.2  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/6184e948a23f996e6bc965bc" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：6.7 创伤与应激相关障碍  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/6184e95d96fc966e23dbcc58" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：6.8 分离障碍与躯体障碍  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/6184e96da23f996e6bc965bd" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：6.9 进食和成瘾障碍  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/618ce187786a5c6e40578dc6" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：6.10 人格障碍  </a>
+      <a class="list-group-item" href="https://www.tangxinli.com/podcasts/618ce1d796fc966e23dc15e1" target="_blank">
+      <span class="pull-right">
+        <small>学习</small>
+        <i class="fa fa-play" style="margin-top: .2em"></i>
+      </span>
+      萌芽8期：答疑6.3  </a>
+    </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" ng-class="tabClass('attachment')" id="attachment">
+              <div ng-controller="CourseMaterialCtrl" class="ng-scope">
+    <!-- ngIf: attendee.status===10 && course.materials.length --><div class="list-group ng-scope" ng-if="attendee.status===10 &amp;&amp; course.materials.length">
+      <!-- ngRepeat: material in course.materials --><a class="list-group-item ng-binding ng-scope" ng-href="https://pan.baidu.com/s/11RINAaMWyR544nmVfvmfcw" target="_blank" ng-repeat="material in course.materials" href="https://pan.baidu.com/s/11RINAaMWyR544nmVfvmfcw">
+        <i class="fa fa-file"></i> 【课件汇总】提取码:f6i9
+        <span class="pull-right">
+          <small>下载</small>
+          <i class="fa fa-download"></i>
+        </span>
+      </a><!-- end ngRepeat: material in course.materials -->
+    </div><!-- end ngIf: attendee.status===10 && course.materials.length -->
+  </div>
+  
+  <script type="text/javascript">
+    angular
+      .module('tangxl')
+      .controller('CourseMaterialCtrl', [
+        '$scope',
+        function ($scope) {
+          $scope.course = ViewModels.course || {};
+          $scope.attendee = ViewModels.attendee || {};
+  
+          if (!$scope.course.customData) {
+            $scope.course.customData = {};
+          }
+  
+          $scope.course.materials = $scope.course.customData.materials || [];
+        }]);
+  </script>          </div>
+            <div role="tabpanel" class="tab-pane" ng-class="tabClass('expert')" id="expert">
+                        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!--/ container -->
+  
+  <script>
+    (function(angular) {
+      angular
+        .module('tangxl')
+        .controller('CourseDetailCtrl', [
+          '$scope',
+          '$timeout',
+          function($scope, $timeout) {
+            $scope.isWechat = isWechatClient();
+            $scope.course = ViewModels.course || {};
+            $scope.attendee = ViewModels.attendee || {};
+  
+            $scope.replays = $scope.course.replays || [];
+  
+            $scope.tabClass = function(name) {
+              return {
+                'active': (name == 'video' && $scope.attendee.id)
+                  || (name == 'detail' && !$scope.attendee.id)
+              }
+            }
+  
+            $timeout(function() {
+              angular.element('.course-content').find('img').removeAttr('style').attr('style', 'width:100%');
+            }, 0);
+          }]);
+    })(window.angular)
+  </script>
+  
+    <div class="footer-nav navbar-fixed-bottom">
+    <div class="row">
+      <div class="col-xs-4">
+        <a href="/ky/courses">
+          <i class="fa fa-home"></i><br>
+          <label>课程</label>
+        </a>
+      </div>
+      <div class="col-xs-4">
+        <a href="/ky/home/courses">
+          <i class="fa fa-calendar-check-o"></i><br>
+          <label>已报课程</label>
+        </a>
+      </div>
+      <div class="col-xs-4">
+        <a href="/ky/home/">
+          <i class="fa fa-home"></i><br>
+          <label>我</label>
+        </a>
+      </div>
+    </div>
+  </div>
+  <style>
+    .footer-nav {
+      text-align: center;
+      padding-top: .8em;
+      background-color: #fff;
+      box-shadow: -1px -1px 2px #eee;
+    }
+  
+    .footer-nav .fa {
+      font-size: 1.2em;
+    }
+  
+    .footer-nav label {
+      font-size: .9em;
+      font-weight: normal;
+    }
+  </style>  <div class="modal" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alert" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-warning btn-block" data-dismiss="modal">确定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!----></body></html>

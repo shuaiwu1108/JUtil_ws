@@ -1,9 +1,12 @@
 package org.wslio;
 
-import org.wslio.utils.FilesUtil;
-import org.wslio.utils.HttpUtil;
-import org.wslio.utils.JedisUtil;
-import org.wslio.utils.PatternMatchesUtil;
+import com.alibaba.druid.pool.DruidPooledConnection;
+import org.wslio.utils.*;
+
+import java.io.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -78,10 +81,57 @@ public class KyVideoAction {
         });
     }
 
+    //合并ts文件为mp4，并删除ts
+    public static void handlerTsToMp4(){
+        Set<String> keys = JedisUtil.getInstance().keys("萌芽8期*");
+        keys.forEach(key -> {
+            List<String> vals = JedisUtil.getKeyByList(key);
+            System.out.println(key);
+            try (FileOutputStream outputStream = new FileOutputStream("D:\\KyVideoMerge\\" + key + ".ts");) {
+                vals.stream().filter(val -> !val.startsWith("#") && !val.startsWith("https"))
+                    .forEach(val -> {
+                        File temp = new File("F:\\DOC\\KY\\KyTsVideo\\" + key + "\\" + val.trim());
+                        try (FileInputStream inputStream = new FileInputStream(temp)){
+                            int len = 0;
+                            byte[] buf = new byte[1024];
+                            while ((len = inputStream.read(buf)) != -1){
+                                outputStream.write(buf, 0, len);
+                            }
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    });
+                System.out.println("-------------------------------------------------");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
     public static void main(String[] args) {
 //        setUrlToRedis();
 //        setUrlRealToRedis();
 //        setKyTsVideoUrlToRedis();
-        getTsToDir();
+//        getTsToDir();
+//        handlerTsToMp4();
+
+        DruidPooledConnection conn = MySqlPoolUtil.getInstance();
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        try {
+            stmt = conn.prepareStatement("select id,username,password,account from t_user");
+            rs = stmt.executeQuery();
+            while (rs.next()){
+                System.out.println(rs.getString(1)+", " + rs.getString("username")+", "+ rs.getString("password") + ", " + rs.getString("account"));
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            MySqlPoolUtil.close(rs, stmt, conn);
+        }
     }
 }

@@ -6,6 +6,7 @@ import org.apache.commons.io.LineIterator;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 public class FilesUtil {
     public static final String baseResources = "src/main/resources/";
@@ -75,6 +76,19 @@ public class FilesUtil {
                     e.printStackTrace();
                 }
             }
+        }
+    }
+
+    public static Properties loadProperties(String fileName){
+        Properties properties = new Properties();
+        try (InputStream inputStream = new BufferedInputStream(new FileInputStream(baseResources + fileName))){
+            properties.load(inputStream);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            return properties;
         }
     }
 
