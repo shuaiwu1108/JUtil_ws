@@ -1,22 +1,64 @@
 package org.wslio.utils;
 
 
+import com.alibaba.druid.util.StringUtils;
+import com.github.kevinsawicki.http.HttpRequest;
+import org.apache.commons.io.IOUtils;
+import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.config.Registry;
+import org.apache.http.config.RegistryBuilder;
+import org.apache.http.conn.socket.ConnectionSocketFactory;
+import org.apache.http.conn.socket.PlainConnectionSocketFactory;
+import org.apache.http.conn.ssl.NoopHostnameVerifier;
+import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
+import org.apache.http.conn.ssl.TrustSelfSignedStrategy;
+import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
+import org.apache.http.message.BasicNameValuePair;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpStatus;
+import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.ContentType;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.ssl.SSLContexts;
+import org.apache.http.util.EntityUtils;
+
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 
 /**
  * web请求工具类封装
@@ -79,5 +121,67 @@ public class HttpUtil {
         }catch (IOException e){
             System.err.println(url + "," + fileName + ", 失败！");
         }
+    }
+
+    public static String sendPostByHttps(String url, Map<String, String> body, Map<String, String> header) {
+
+        CloseableHttpResponse response = null;
+        // 处理请求路径
+        //创建httpclient对象
+        CloseableHttpClient client = null;
+        String respBody;
+        try {
+            client = HttpClients.custom()
+                    .setSSLSocketFactory(new SSLConnectionSocketFactory(SSLContexts.custom()
+                            //忽略掉对服务器端证书的校验
+                            .loadTrustMaterial(null, new TrustSelfSignedStrategy())
+                            .build(), NoopHostnameVerifier.INSTANCE))
+                    .build();
+            //创建post方式请求对象
+            HttpPost httpPost = new HttpPost(url);
+            // 请求头设置
+            httpPost.setHeader("Content-Type", "application/json");
+            if (header != null) {
+                for(String s:header.keySet()){
+                    httpPost.setHeader(s,header.get(s));
+                }
+            }
+            // 情求体设置
+            if (body != null) {
+                httpPost.setEntity(new StringEntity(JsonUtil.parseObject(body), "utf-8"));
+            }
+            //执行请求操作，并拿到结果
+            response = client.execute(httpPost);
+            //获取结果实体
+            HttpEntity entity = response.getEntity();
+            if (entity != null) {
+                respBody = EntityUtils.toString(entity);
+                return respBody;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (client != null) {
+                    client.close();
+                }
+                if (response != null) {
+                    response.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return null;
+    }
+
+    public static String postTest(){
+        String result = HttpRequest.post("https://223.75.53.63:44380/iot/ganwei/v2/devices")
+                .header("Content-Type", "application/json")
+                .header("X-ClientId", "d0ba3f5f1b6106e9")
+                .form("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoi5YyX5ZCR5bqU55So5Li76LSm5Y-3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQURNSU4iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImQwYmEzZjVmMWI2MTA2ZTkiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zeXN0ZW0iOiLmuZbljJfogZTmipXljYPmlrnpobnnm64iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9leHBpcmVkIjoiMDMvMjkvMjAyMiAxMTo0ODoyNCIsImV4cCI6MTY0ODUyNTcwNCwiaXNzIjoiZ2Fud2Vpc29mdC5uZXQiLCJhdWQiOiJnYW53ZWlzb2Z0Lm5ldCJ9.aL0B30DtRyGcynhzZwfntAd2tlwfFZ1wef3B92opRYY")
+                .body();
+        return result;
     }
 }

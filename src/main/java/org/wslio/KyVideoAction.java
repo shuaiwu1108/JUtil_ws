@@ -1,15 +1,16 @@
 package org.wslio;
 
 import com.alibaba.druid.pool.DruidPooledConnection;
+import org.wslio.models.ListNode;
 import org.wslio.utils.*;
 
 import java.io.*;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class KyVideoAction {
     private static final String baseUrl = "https://www.tangxinli.com";
@@ -113,25 +114,85 @@ public class KyVideoAction {
     }
 
     public static void main(String[] args) {
+        System.out.println(System.getProperty("os.name"));
+        System.out.println(System.getProperty("os.arch"));
+//        MessageUtil.main(new String[]{"10.8.1.17:9092"});
 //        setUrlToRedis();
 //        setUrlRealToRedis();
 //        setKyTsVideoUrlToRedis();
 //        getTsToDir();
 //        handlerTsToMp4();
 
-        DruidPooledConnection conn = MySqlPoolUtil.getInstance();
-        PreparedStatement stmt = null;
-        ResultSet rs = null;
-        try {
-            stmt = conn.prepareStatement("select id,username,password,account from t_user");
-            rs = stmt.executeQuery();
-            while (rs.next()){
-                System.out.println(rs.getString(1)+", " + rs.getString("username")+", "+ rs.getString("password") + ", " + rs.getString("account"));
-            }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        } finally {
-            MySqlPoolUtil.close(rs, stmt, conn);
+//        DruidPooledConnection conn = MySqlPoolUtil.getInstance();
+//        PreparedStatement stmt = null;
+//        ResultSet rs = null;
+//        try {
+//            stmt = conn.prepareStatement("select id,username,password,account from t_user");
+//            rs = stmt.executeQuery();
+//            while (rs.next()){
+//                System.out.println(rs.getString(1)+", " + rs.getString("username")+", "+ rs.getString("password") + ", " + rs.getString("account"));
+//            }
+//        } catch (SQLException throwables) {
+//            throwables.printStackTrace();
+//        } finally {
+//            MySqlPoolUtil.close(rs, stmt, conn);
+//        }
+    }
+
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        List<Integer> l1List = new ArrayList<>();
+        int val1 =  l1.val;
+        l1List.add(val1);
+        while(l1.next!=null){
+            l1 = l1.next;
+            l1List.add(l1.val);
         }
+        Collections.reverse(l1List);
+        System.out.println("l1: " + l1List.toString());
+
+
+        List<Integer> l2List = new ArrayList<>();
+        int val2 = l2.val;
+        l2List.add(val2);
+        while(l2.next!=null){
+            l2 = l2.next;
+            l2List.add(l2.val);
+        }
+        Collections.reverse(l2List);
+        System.out.println("l2: " + l2List.toString());
+
+        int l1Tmp = 0;
+        for(int i=0; i<l1List.size(); i++){
+            int tmp = l1List.size() - i - 1;
+            l1Tmp += l1List.get(i) * Math.pow(10, tmp);
+        }
+        System.out.println("l1Count: " + l1Tmp);
+
+        int l2Tmp = 0;
+        for(int i=0; i<l2List.size(); i++){
+            int tmp = l2List.size() - i - 1;
+            l2Tmp += l2List.get(i) * Math.pow(10, tmp);
+        }
+        System.out.println("l2Count: " + l2Tmp);
+
+        int tot = l1Tmp + l2Tmp;
+        System.out.println("totCount: " + tot);
+
+        String t = reverseTestSix(tot+"");
+        System.out.println("t: " + t);
+
+        ListNode resNode = new ListNode();
+        for (int i=0; i<t.length(); i++){
+            resNode.next = new ListNode(Integer.parseInt(t.substring(i, i+1)));
+            resNode = resNode.next;
+        }
+        return resNode.next;
+    }
+
+    public static String reverseTestSix(String s) {
+        if (s.length() <= 1) {
+            return s;
+        }
+        return reverseTestSix(s.substring(1)) + s.substring(0, 1);
     }
 }
