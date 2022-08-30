@@ -1,9 +1,6 @@
 package org.wslio.utils;
 
-import com.sun.xml.internal.messaging.saaj.util.ByteInputStream;
 import info.monitorenter.cpdetector.io.*;
-import sun.nio.cs.ext.GBK;
-
 import java.io.*;
 import java.nio.charset.Charset;
 
@@ -57,7 +54,6 @@ public class StreamUtil {
 
     public static void main(String[] args) throws IOException {
         String body = readFile("src/main/resources/KY视频列表地址.txt");
-        ByteInputStream
         System.out.println(body);
     }
 }
