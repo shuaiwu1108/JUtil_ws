@@ -1,4 +1,4 @@
-package org.wslio.utils;
+package net.shuaiwu.utils;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;

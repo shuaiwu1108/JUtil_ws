@@ -1,4 +1,4 @@
-package org.wslio.utils;
+package net.shuaiwu.utils;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.LineIterator;

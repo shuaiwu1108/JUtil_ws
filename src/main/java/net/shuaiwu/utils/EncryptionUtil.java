@@ -1,4 +1,4 @@
-package org.wslio.utils;
+package net.shuaiwu.utils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

@@ -1,4 +1,4 @@
-package org.wslio.utils;
+package net.shuaiwu.utils;
 
 import info.monitorenter.cpdetector.io.*;
 import java.io.*;

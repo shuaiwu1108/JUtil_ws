@@ -1,7 +1,30 @@
 # JUtil_ws
-## 个人`工具类`，避免重复`造轮子`
-### 网页请求工具，HttpUtil
-### 加密解密工具，EncryptionUtil
-### 文件读写工具，FilesUtil
-### 消息队列工具，MessageUtil
-### 缓存工具，CacheUtil
+说明：个人`工具类`，避免重复`造轮子`
+
+目录结构
+----------
+    JUtil_ws  
+    ├─pom.xml  
+    ├─src  
+    |  ├─main  
+    |  |  ├─resources  
+    |  |  ├─java  
+    |  |  |  ├─net  
+    |  |  |  |  ├─shuaiwu  
+    |  |  |  |  |   ├─Action.java  
+    |  |  |  |  |   ├─utils  
+    |  |  |  |  |   |   ├─AccountCheckUtil.java   
+    |  |  |  |  |   |   ├─EncryptionUtil.java  
+    |  |  |  |  |   |   ├─FilesUtil.java  
+    |  |  |  |  |   |   ├─HttpUtil.java  
+    |  |  |  |  |   |   ├─JedisUtil.java  
+    |  |  |  |  |   |   ├─JsonUtil.java  
+    |  |  |  |  |   |   ├─MessageUtil.java  
+    |  |  |  |  |   |   ├─MySqlPoolUtil.java  
+    |  |  |  |  |   |   ├─PatternMatchesUtil.java  
+    |  |  |  |  |   |   ├─StreamUtil.java  
+    |  |  |  |  |   |   └─VideoUtil.java  
+    |  |  |  |  |   ├─models  
+    |  |  |  |  |   |   └ListNode.java  
+
+ 

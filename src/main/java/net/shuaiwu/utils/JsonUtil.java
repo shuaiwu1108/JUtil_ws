@@ -1,4 +1,4 @@
-package org.wslio.utils;
+package net.shuaiwu.utils;
 
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;

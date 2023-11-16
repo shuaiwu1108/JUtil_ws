@@ -1,4 +1,4 @@
-package org.wslio.utils;
+package net.shuaiwu.utils;
 
 import redis.clients.jedis.Jedis;
 import java.util.ArrayList;

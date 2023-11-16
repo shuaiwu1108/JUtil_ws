@@ -1,4 +1,4 @@
-package org.wslio.models;
+package net.shuaiwu.models;
 
 public class ListNode {
     public int val;

@@ -1,4 +1,4 @@
-package org.wslio.utils;
+package net.shuaiwu.utils;
 
 import org.bytedeco.ffmpeg.global.avcodec;
 import org.bytedeco.javacpp.Loader;
