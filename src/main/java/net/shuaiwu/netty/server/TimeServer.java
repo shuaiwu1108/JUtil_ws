@@ -8,20 +8,20 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import net.shuaiwu.netty.handler.DiscardServerHandler;
+import net.shuaiwu.netty.encoder.TimeEncoder;
 import net.shuaiwu.netty.handler.TimeServerHandler;
 
 /**
- * 数据丢弃处理Server
+ * 时间服务器
  *
  * @author shuaiwu
  * @date 2023-11-16 10:08
  */
-public class DiscardServer {
+public class TimeServer {
 
     private int port;
 
-    public DiscardServer(int port) {
+    public TimeServer(int port) {
         this.port = port;
     }
 
@@ -37,7 +37,7 @@ public class DiscardServer {
                     @Override
                     public void initChannel(SocketChannel ch) throws Exception {
                         ch.pipeline()
-                            .addLast(new DiscardServerHandler());
+                            .addLast(new TimeEncoder(), new TimeServerHandler());
                     }
                 })
                 .option(ChannelOption.SO_BACKLOG, 128)          // (5)
