@@ -1,5 +1,6 @@
 package net.shuaiwu;
 
+import net.shuaiwu.net.NetworkRequest;
 import net.shuaiwu.netty.client.TimeClient;
 
 /**
@@ -12,5 +13,6 @@ public class Action {
 
     public static void main(String[] args) throws Exception {
         new TimeClient().run(new String[]{"127.0.0.1", "9001"});
+        NetworkRequest.start("http://127.0.0.1:9000/test", "GET", 5000, 10000);
     }
 }
