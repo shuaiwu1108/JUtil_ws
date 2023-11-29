@@ -7,7 +7,7 @@ package net.shuaiwu.pattern.state;
  * @date 2023-11-28 17:14
  */
 public class SoldState implements State{
-    private GumballMachine gumballMachine;
+    private transient GumballMachine gumballMachine;
 
     public SoldState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;

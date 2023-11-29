@@ -7,7 +7,7 @@ package net.shuaiwu.pattern.state;
  * @date 2023-11-28 17:13
  */
 public class HasQuarterState implements State{
-    private GumballMachine gumballMachine;
+    private transient GumballMachine gumballMachine;
 
     public HasQuarterState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;

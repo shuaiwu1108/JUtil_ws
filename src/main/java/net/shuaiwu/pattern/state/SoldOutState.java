@@ -9,7 +9,7 @@ package net.shuaiwu.pattern.state;
  */
 public class SoldOutState implements State {
 
-    private GumballMachine gumballMachine;
+    private transient GumballMachine gumballMachine;
 
     public SoldOutState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;

@@ -1,5 +1,10 @@
 package net.shuaiwu.pattern.state;
 
+import java.net.MalformedURLException;
+import java.rmi.Naming;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+
 /**
  * 糖果机测试
  *
@@ -9,7 +14,14 @@ package net.shuaiwu.pattern.state;
 public class GumballMachineTestDrive {
 
     public static void main(String[] args) {
-        GumballMachine g = new GumballMachine(5);
+        GumballMachine g = null;
+        try {
+            g = new GumballMachine("wuhan", 5);
+            LocateRegistry.createRegistry(1900);
+            Naming.rebind("rmi://localhost:1900/gumballmachine", g);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         System.out.println(g);
 
