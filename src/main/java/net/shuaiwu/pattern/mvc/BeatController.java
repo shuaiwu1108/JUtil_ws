@@ -5,7 +5,7 @@ package net.shuaiwu.pattern.mvc;
  * <p>
  * 2023/11/30 21:50
  **/
-public class BeatController implements ControllerInterface{
+public class BeatController implements ControllerInterface {
     BeatModelInterface model;
     DJView view;
 
@@ -19,34 +19,29 @@ public class BeatController implements ControllerInterface{
         model.initialize();
     }
 
-    @Override
     public void start() {
         model.on();
         view.disableStartMenuItem();
         view.enableStopMenuItem();
     }
 
-    @Override
     public void stop() {
         model.off();
         view.disableStopMenuItem();
         view.enableStartMenuItem();
     }
 
-    @Override
-    public void setBPM(int bpm) {
-        model.setBPM(bpm);
-    }
-
-    @Override
     public void increaseBPM() {
         int bpm = model.getBPM();
         model.setBPM(bpm + 1);
     }
 
-    @Override
     public void decreaseBPM() {
         int bpm = model.getBPM();
         model.setBPM(bpm - 1);
+    }
+
+    public void setBPM(int bpm) {
+        model.setBPM(bpm);
     }
 }
